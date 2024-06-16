@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mov-obliquo.css">
+    <title>Movimento Oblíquo</title>
+</head>
+<body>
+    <div class="container">
+        <div class="max-height"></div>
+        <div class="max-range"></div>
+        <div class="ball"></div>
+    </div>
+    <div class="settings active">
+        <div class="btn-settings">
+            <button class="btn-close" onclick="toggleSettings()"></button>
+        </div>
+        <div class="input">
+            <div class="row">
+                <label for="a-range">&theta;</label>
+                <input id="a-range" type="range" min="0" max="90" step="1" value="60">
+            </div>
+            <div class="row">
+                <label for="v-range">V<sub>o</sub></label>
+                <input id="v-range" type="range" min="0" max="100" step="1" value="40">
+            </div>
+            <div class="row">
+                <label for="planets" style="margin-right: 10px;">Planet</label>
+                <select name="planets" id="planets" onchange="selectPlanet(this)">
+                    <option value="earth">earth</option>
+                    <option value="sun">sun</option>
+                    <option value="mercury">mercury</option>
+                    <option value="venus">venus</option>
+                    <option value="moon">moon</option>
+                    <option value="mars">mars</option>
+                    <option value="jupiter">jupiter</option>
+                    <option value="saturn">saturn</option>
+                    <option value="uranus">uranus</option>
+                    <option value="neptune">neptune</option>
+                    <option value="pluto">pluto</option>
+                </select>
+            </div>
+        </div>
+
+        <table class="output">
+            <thead>
+                <tr>
+                    <td># var</td>
+                    <td># value</td>
+                    <td># unit</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&theta;</td>
+                    <td id="a-output">0</td>
+                    <td>°</td>
+                </tr>
+                <tr>
+                    <td>v<sub>o</sub></td>
+                    <td id="v-output">0</td>
+                    <td>m/s</td>
+                </tr>
+                <tr>
+                    <td>g</td>
+                    <td id="g-output">0</td>
+                    <td>m/s<sup>2</sup></td>
+                </tr>
+                <tr>
+                    <td>v<sub>x</sub></td>
+                    <td id="vx-output">0</td>
+                    <td>m/s</td>
+                </tr>
+                <tr>
+                    <td>v<sub>y</sub></td>
+                    <td id="vy-output">0</td>
+                    <td>m/s</td>
+                </tr>
+                <tr>
+                    <td>&Delta;x</td>
+                    <td id="dx-output">0</td>
+                    <td>m</td>
+                </tr>
+                <tr>
+                    <td>&Delta;y</td>
+                    <td id="dy-output">0</td>
+                    <td>m</td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="run" onclick="run()"></button>
+    </div>
+    <script src="mov-obliquo.js"></script>
+</body>
+</html>
