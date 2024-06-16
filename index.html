@@ -10,20 +10,21 @@
     <div class="container">
         <div class="max-height"></div>
         <div class="max-range"></div>
+        <div class="cannon"><img src="imgs/canhao-orig.png" alt="Canhão"></div>
         <div class="ball"></div>
     </div>
+    <div class="btn-settings">
+        <button class="btn-close" onclick="toggleSettings()"></button>
+    </div>
     <div class="settings active">
-        <div class="btn-settings">
-            <button class="btn-close" onclick="toggleSettings()"></button>
-        </div>
         <div class="input">
             <div class="row">
                 <label for="a-range">&theta;</label>
-                <input id="a-range" type="range" min="0" max="90" step="1" value="60">
+                <input id="a-range" type="range" min="1" max="90" step="1" value="60">
             </div>
             <div class="row">
                 <label for="v-range">V<sub>o</sub></label>
-                <input id="v-range" type="range" min="0" max="100" step="1" value="40">
+                <input id="v-range" type="range" min="1" max="100" step="1" value="40">
             </div>
             <div class="row">
                 <label for="planets" style="margin-right: 10px;">Planet</label>

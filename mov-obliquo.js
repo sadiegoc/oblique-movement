@@ -6,10 +6,13 @@ const settings = document.querySelector('.settings');
 const btn_close = document.querySelector('.btn-close');
 const btn_run = document.querySelector('.run');
 
+const ball_size = div_ball.clientWidth;
+const initial_height = 40
 const pfull_y = document.querySelector('.container').clientHeight;
-const ptrajectory_y = (pfull_y - 40);
+const ptrajectory_y = (pfull_y - ball_size);
 const mtrajectory_y = 100;
 const p_m = (ptrajectory_y / mtrajectory_y);
+
 const planets = {
     sun: 274.13,
     mercury: 3.7,
@@ -37,9 +40,12 @@ const vx_output = document.querySelector('#vx-output');
 const vy_output = document.querySelector('#vy-output');
 const dx_output = document.querySelector('#dx-output');
 const dy_output = document.querySelector('#dy-output');
+const cannon = document.querySelector('.cannon');
 a_output.innerHTML = a_range.value;
 v_output.innerHTML = v_range.value;
 g_output.innerHTML = planets[select.value]
+cannon.style.transformOrigin = '24% center';
+cannon.style.transform = `rotate(-${a_range.value}deg)`;
 
 class Ball {
     constructor (ball, g, V, theta) {
@@ -78,7 +84,7 @@ class Ball {
     }
     
     animate (temp) {
-        if ((this.moveY() > 10) || (this.moveX() < this.maxRange())) {
+        if ((this.moveY() > (10 + initial_height)) || (this.moveX() < this.maxRange())) {
             this.setX(this.moveX());
             this.setY(this.moveY());
             this.updateVpy();
@@ -129,13 +135,13 @@ class Ball {
 }
 
 function resetPositions () {
-    div_ball.style.bottom = '0px'; div_ball.style.left = '0px';
+    div_ball.style.bottom = `${initial_height}px`; div_ball.style.left = '0px';
     height_mark.style.bottom = '0px'; range_mark.style.left = '0px';
 }
 
 function setMark (range, height) {
-    height_mark.style.bottom = `${height + 40}px`;
-    range_mark.style.left = `${range + 40}px`;
+    height_mark.style.bottom = `${height + ball_size + initial_height}px`;
+    range_mark.style.left = `${range + ball_size}px`;
 }
 
 function selectPlanet (planet) {
@@ -168,6 +174,7 @@ function run () {
 
 a_range.oninput = function () {
     a_output.innerHTML = this.value;
+    cannon.style.transform = `rotate(-${this.value}deg)`;
 }
 
 v_range.oninput = function () {
