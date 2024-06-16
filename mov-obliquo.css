@@ -4,7 +4,7 @@
     --settings-width: 300px;
     --ball-size: 30px;
     --cannon-size: 100px;
-    --init-height: 0px;
+    --init-height: 0;
 }
 
 * {
@@ -24,7 +24,7 @@ body {
 }
 
 .ball {
-    margin: 0; padding: 0;
+    margin: 0; padding: 0; z-index: -1;
     position: absolute; width: var(--ball-size); height: var(--ball-size);
     background-color: crimson; border-radius: 50%;
     bottom: var(--init-height); left: 0;
@@ -35,7 +35,7 @@ body {
     position: absolute; left: 0; bottom: var(--init-height);
 }
 
-.cannon img { width: var(--cannon-size);  }
+.cannon img { width: var(--cannon-size); }
 
 .settings {
     margin: 0; padding: 0; display: flex; flex-direction: column;

@@ -45,7 +45,7 @@ a_output.innerHTML = a_range.value;
 v_output.innerHTML = v_range.value;
 g_output.innerHTML = planets[select.value]
 body.style.backgroundImage = `url(imgs/${select.value}.png)`;
-cannon.style.transformOrigin = '24% center';
+cannon.style.transformOrigin = '24% 50%';
 cannon.style.transform = `rotate(-${a_range.value}deg)`;
 
 class Ball {
