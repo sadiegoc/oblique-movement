@@ -4,6 +4,7 @@
     --settings-width: 300px;
     --ball-size: 30px;
     --cannon-size: 100px;
+    --init-height: 0px;
 }
 
 * {
@@ -13,9 +14,8 @@
 body {
     overflow: hidden; margin: 0; padding: 0;
     display: flex; flex-direction: row;
-    background-image: url(imgs/moon.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url(imgs/earth.jpg);
+    background-repeat: no-repeat; background-size: cover; background-position: center;
 }
 
 .container {
@@ -27,12 +27,12 @@ body {
     margin: 0; padding: 0;
     position: absolute; width: var(--ball-size); height: var(--ball-size);
     background-color: crimson; border-radius: 50%;
-    bottom: 40px; left: 0;
+    bottom: var(--init-height); left: 0;
 }
 
 .cannon {
     margin: 0; padding: 0; width: var(--cannon-size);
-    position: absolute; left: 0; bottom: 40px;
+    position: absolute; left: 0; bottom: var(--init-height);
 }
 
 .cannon img { width: var(--cannon-size);  }

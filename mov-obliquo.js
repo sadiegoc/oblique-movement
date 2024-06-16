@@ -1,3 +1,4 @@
+const body = document.querySelector('body');
 const div_ball = document.querySelector('.ball');
 const height_mark = document.querySelector('.max-height');
 const range_mark = document.querySelector('.max-range');
@@ -7,7 +8,7 @@ const btn_close = document.querySelector('.btn-close');
 const btn_run = document.querySelector('.run');
 
 const ball_size = div_ball.clientWidth;
-const initial_height = 40
+const initial_height = 0;
 const pfull_y = document.querySelector('.container').clientHeight;
 const ptrajectory_y = (pfull_y - ball_size);
 const mtrajectory_y = 100;
@@ -24,7 +25,6 @@ const planets = {
     saturn: 10.44,
     uranus: 8.69,
     neptune: 11.15,
-    pluto: 0.62
 }
 
 const interval_frame = 20;
@@ -44,6 +44,7 @@ const cannon = document.querySelector('.cannon');
 a_output.innerHTML = a_range.value;
 v_output.innerHTML = v_range.value;
 g_output.innerHTML = planets[select.value]
+body.style.backgroundImage = `url(imgs/${select.value}.png)`;
 cannon.style.transformOrigin = '24% center';
 cannon.style.transform = `rotate(-${a_range.value}deg)`;
 
@@ -144,8 +145,9 @@ function setMark (range, height) {
     range_mark.style.left = `${range + ball_size}px`;
 }
 
-function selectPlanet (planet) {
-    g_output.innerHTML = planets[planet.value];
+function selectPlanet () {
+    g_output.innerHTML = planets[select.value];
+    body.style.backgroundImage = `url(imgs/${select.value}.png)`;
 }
 
 function toggleSettings () {
