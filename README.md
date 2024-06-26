@@ -4,3 +4,6 @@
 
 <h2>Como funciona</h2>
 <p align="justify">O usuário seleciona qual planeta ele deseja simular, escolhe o ângulo de lançamento (que vai de 0° a 90°) e a velocidade inicial do projétil. Depois é só apertar Run para a animação começar.</p>
+
+<h2>Tecnologias</h2>
+<p align="justify">Foi desenvolvido com HTML, CSS e JavaScript puros.</p>
