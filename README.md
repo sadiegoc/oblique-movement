@@ -5,4 +5,4 @@
 <h3>Como funciona</h3>
 <p align="justify">O usuário seleciona qual planeta ele deseja simular, escolhe o ângulo de lançamento (que vai de 0° a 90°) e a velocidade inicial do projétil. Ao iniciar a animação, logo é mostrado a altura máxima (linha vermelha horizontal) e o alcance máximo (linha vermelha vertical) que o seu projétil alcançará.</p>
 
-<p align="justify">Desenvolvido com HTML, CSS e JavaScript puros.</p>
+<i align="justify">Desenvolvido com HTML, CSS e JavaScript puros.</i>
