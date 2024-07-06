@@ -1,5 +1,5 @@
 <h1 align="center">Movimento oblíquo</h1>
-<p align="justify">Movimento (ou lançamento) oblíquo é quando a trajetória de um corpo é composta por velocidades atuando em direções diferentes, i.e., duas dimensões. O arremesso de uma bola de basquete, por exemplo, é um movimento oblíquo.</p>
+<p align="justify">Movimento (ou lançamento) oblíquo é quando a trajetória de um corpo é composta por velocidades atuando em direções diferentes, i. e., duas dimensões. O arremesso de uma bola de basquete, por exemplo, é um movimento oblíquo.</p>
 <p align="justify">O propósito deste projeto é simular este tipo de movimento em diferentes planetas do sistema solar e também na Lua.</p>
 
 <h3>Como funciona</h3>
